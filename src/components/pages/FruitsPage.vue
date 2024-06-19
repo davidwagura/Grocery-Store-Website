@@ -8,7 +8,7 @@
         <!-- Fruits Card -->
         <div v-for="fruit in fruits" :key="fruit.id" class="bg-white rounded-lg overflow-hidden shadow-lg">
 
-          <img :src="require(`../../assets/images/${image}`)" alt="Fruit" class="w-full h-64 object-cover">
+          <img :src="require(`../../assets/fruits/${fruit.image}`)" alt="Fruit" class="w-full h-64 object-cover">
 
         <div class="p-4"> 
 
@@ -29,6 +29,7 @@
 </template>
   
 <script>
+
   export default {
 
     data() {
@@ -37,10 +38,24 @@
 
         fruits: [
 
-          { id: 1, name: 'Apple', description: 'Crisp and juicy apples from local orchards.', image: 'fruits.jpeg' },
-          // { id: 2, name: 'Orange', description: 'Sweet and tangy oranges bursting with vitamin C.', image: 'orange.jpg' },
-          // { id: 3, name: 'Banana', description: 'Nutritious and delicious bananas perfect for a quick snack.', image: 'banana.jpg' },
+          { id: 1, name: 'Apple', description: 'Crisp and juicy apples from local orchards.', image: 'apples.jpeg' },
 
+          { id: 2, name: 'Orange', description: 'Sweet and tangy oranges bursting with vitamin C.', image: 'oranges.jpeg' },
+
+          { id: 3, name: 'Banana', description: 'Nutritious and delicious bananas perfect for a quick snack.', image: 'bananas.jpeg' },
+
+          { id: 4, name: 'Strawberry', description: 'Fresh and sweet strawberries, perfect for desserts.', image: 'strawberry.jpeg' },
+
+          { id: 5, name: 'Grapes', description: 'Juicy grapes that are great for snacking and wine-making.', image: 'grapes.jpeg' },
+
+          { id: 6, name: 'Pineapple', description: 'Tropical pineapples with a sweet and tangy flavor.', image: 'pineapple.jpeg' },
+
+          { id: 7, name: 'Watermelon', description: 'Refreshing watermelons perfect for hot summer days.', image: 'watermelon.jpeg' },
+
+          { id: 8, name: 'Mango', description: 'Sweet and juicy mangoes from tropical regions.', image: 'mangos.jpeg' },
+
+          { id: 9, name: 'Blueberry', description: 'Antioxidant-rich blueberries perfect for snacks and baking.', image: 'blueberry.jpeg' },
+      
         ]
 
       };
@@ -48,5 +63,6 @@
     }
 
   };
+
 </script>
   
