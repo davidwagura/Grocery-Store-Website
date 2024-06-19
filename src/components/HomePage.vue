@@ -1,10 +1,12 @@
 
 <template>
+
     <div>
 
-        <div>
+        <div >
 
-        <!-- <img src="@/assets/smartphones.jpg" /> -->
+            <img class="rounded-lg w-30px h-30px" src="../assets/images/grocery.jpg" />
+
         </div>
 
        <nav class="mt-12 mb-8 text-center font-bold">
@@ -13,15 +15,15 @@
 
             <router-link class="pl-6" to="/about">About</router-link>
 
-            <router-link class="pl-6" to="/shop">Contact Us</router-link>
+            <router-link class="pl-6" to="/contact">Contact Us</router-link>
 
-            <router-link class="pl-6" to="/contact">Offers</router-link>
+            <router-link class="pl-6" to="/offers">Offers</router-link>
 
        </nav> 
 
        <div class="justify-end flex -mt-16 pr-4 space-x-5">
 
-            <router-link class="hover:text-white-200" to="/wishlist">
+            <button class="hover:text-white-200" to="/wishlist">
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -30,9 +32,9 @@
                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
 
                 </svg>
-            </router-link>
+            </button>
 
-            <router-link class="flex items-center hover:text-white-200" to="/cart">
+            <button class="flex items-center hover:text-white-200" to="/cart">
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
@@ -49,10 +51,10 @@
 
                 </span>
 
-            </router-link>
+            </button>
                     <!-- Sign In / Register Section -->
 
-            <router-link v-if="!isLoggedIn" class="flex items-center hover:text-white-200" to="/login">
+            <button v-if="''" class="flex items-center hover:text-white-200" to="/login">
 
                         <!-- Login icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-white-200" fill="none"
@@ -63,7 +65,7 @@
 
                 </svg>
 
-            </router-link>
+            </button>
 
 
             <router-link v-else class="flex items-center hover:text-white-200" to="/user-account">
@@ -84,17 +86,17 @@
 
     <div class="mt-16">
     
-        <div class="rounded-lg p-8 text-left m-8 bg-cover bg-center" id="fruits" style="background-image: url('fruits.jpg');">
+        <div class="rounded-lg p-8 text-left m-8 bg-cover bg-center" id="fruits">
        
-            <a href="/fruits">
+            <router-link to="/fruits">
             
                 <h2 class="font-bold">Fresh Fruits</h2>
             
-            </a><br>
+            </router-link><br>
             
             <p class="mb-6">Discover a delightful selection of fresh fruits, sourced for their quality and flavor. From seasonal favorites to exotic varieties, our fruits are perfect for adding freshness to your meals or enjoying as a healthy snack.</p>
             
-            <a class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" href="/fruits">Shop Now</a>
+            <router-link class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" to="/fruits">Shop Now</router-link>
         
         </div>
 
@@ -102,32 +104,32 @@
             
             <div class="inline-flex">
                 
-                <div class="flex flex-col p-8 m-8 rounded-lg" id="vegetables" style="background-image: url('vegetables.jpg');">
+                <div class="flex flex-col p-8 m-8 rounded-lg" id="vegetables">
                     
-                    <a href="/vegetables">
+                    <router-link to="/vegetables">
                         
                         <h2 class="font-bold mb-4">Vegetables</h2>
                     
-                    </a>
+                    </router-link>
                     
                     <p>Explore our garden-fresh vegetables, packed with nutrients and flavor. From leafy greens to crunchy peppers, our selection ensures your meals are vibrant and nutritious.</p>
                     
-                    <a class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" href="/vegetables">Shop Now</a>
+                    <router-link class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" to="/vegetables">Shop Now</router-link>
                 
                 </div>
 
             
-                <div class="flex rounded-lg flex-col p-8 m-8" id="dairy" style="background-image: url('dairy.jpg');">
+                <div class="flex rounded-lg flex-col p-8 m-8" id="dairy">
                     
-                    <a href="/dairy">
+                    <router-link to="/dairy">
                         
                         <h1 class="font-bold mb-4">Dairy Products</h1>
                     
-                    </a>
+                    </router-link>
                     
                     <p>Indulge in our range of dairy products, sourced from local farms to ensure freshness and quality. From creamy yogurts to rich cheeses, discover dairy delights that elevate your recipes.</p>
                     
-                    <a class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" href="/dairy">Shop Now</a>
+                    <router-link class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" to="/dairy">Shop Now</router-link>
                 
                 </div>
             
@@ -139,32 +141,32 @@
             
             <div class="inline-flex">
                 
-                <div class="flex flex-col rounded-lg p-8 m-8" id="meat-seafood" style="background-image: url('~@/assets/seafood .jpeg');">
+                <div class="flex flex-col rounded-lg p-8 m-8" id="meat-seafood">
                     
-                    <a href="/meat-seafood">
+                    <router-link to="/meat-seafood">
                         
                         <h2 class="font-bold mb-4">Meat and Seafood</h2>
                     
-                    </a>
+                    </router-link>
                 
                     <p>From succulent steaks to fresh seafood, our meat and seafood selection offers premium cuts and sustainable options. Enjoy restaurant-quality meals at home with our carefully sourced proteins.</p>
                     
-                    <a class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" href="/meat-seafood">Shop Now</a>
+                    <router-link class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" to="/meat-seafood">Shop Now</router-link>
                 
                 </div>
 
                 
-                <div class="flex flex-col rounded-lg p-8 m-8 ml-auto" id="bakery" style="background-image: url('.../.../assets/bakery.jpeg');">
+                <div class="flex flex-col rounded-lg p-8 m-8 ml-auto" id="bakery">
                     
-                    <a href="/bakery">
+                    <router-link to="/bakery">
                         
                         <h1 class="font-bold mb-4">Bakery</h1>
                     
-                    </a>
+                    </router-link>
                     
                     <p>Experience the aroma of freshly baked goods with our bakery collection. From artisan breads to decadent pastries, our bakery items are crafted with passion and expertise to satisfy every craving.</p>
                     
-                    <a class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" href="/bakery">Shop Now</a>
+                    <router-link class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" to="/bakery">Shop Now</router-link>
                 
                 </div>
             
@@ -172,18 +174,17 @@
             
         </div>
 
-        <div class="p-8 text-left rounded-lg m-8" id="pantry" style="background-image: url('../assets/pantry.jpeg');">
-                            <img alt="David Image" src="../assets/pantry.jpeg">
+        <div class="p-8 text-left rounded-lg m-8" id="pantry">
 
-            <a href="/pantry">
+            <router-link to="/pantry">
                     
                 <h2 class="font-bold">Pantry Staples</h2>
                 
-            </a><br>
+            </router-link><br>
                 
             <p class="mb-4">Stock your pantry with essentials that form the foundation of every meal. From grains and spices to canned goods, our pantry staples ensure you're prepared for any culinary adventure.</p>
                 
-            <a class="bg-blue-500 border rounded-full w-1/4 p-4" href="/pantry">Shop Now</a>
+            <router-link class="bg-blue-500 border rounded-full w-1/4 p-4" to="/pantry">Shop Now</router-link>
 
         </div>
 
@@ -235,8 +236,67 @@
 
 </template>
 
+<style>
+    #fruits {
 
-<script>
+        background-image: url('../assets/images/fruits1.jpeg');
 
-</script>
+        color: white;
 
+    }
+
+     #vegetables {
+
+        background-image: url('../assets/images/vegetables.jpeg');
+
+        color: white;
+
+        background-size: cover;
+        
+    }
+
+
+    #dairy {
+
+        background-image: url('../assets/images/dairy products.jpeg');
+
+        color: white;
+
+        background-size: cover;
+
+    }
+ 
+    #meat-seafood {
+
+        background-image: url('../assets/images/meat.jpeg');
+
+        color: white;
+
+        background-size: cover;
+
+    }
+   
+    #bakery {
+
+        background-image: url('../assets/images/bakery.jpeg');
+
+        color: white;
+
+        background-repeat: no-repeat;
+
+        background-size: cover;
+
+    }
+
+    #pantry {
+
+        background-image: url('../assets/images/pantry.jpeg');
+
+        color: white;
+ 
+        background-repeat: no-repeat;
+
+        background-size: cover;
+
+    }
+</style>
