@@ -14,6 +14,8 @@ import PantryStaples from '@/components/pages/PantryStaples.vue';
 
 import VegetablePage from '@/components/pages/VegetablePage.vue';
 
+import CartPage from '@/components/Links/CartPage.vue'
+
 
 const routes = [
 
@@ -30,6 +32,8 @@ const routes = [
 { path: '/bakery', component: BakeryPage },
 
 { path: '/pantry', component: PantryStaples },
+
+{ path: '/cart', component: CartPage  }
 
 
 ]

@@ -3,7 +3,7 @@
 
     <h1 class="text-3xl font-bold mb-8">Explore Fresh Fruits</h1>
   
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-1">
 
         <!-- Fruits Card -->
         <div v-for="fruit in fruits" :key="fruit.id" class="bg-white rounded-lg overflow-hidden shadow-lg">
@@ -16,7 +16,13 @@
 
         <p class="text-gray-700">{{ fruit.description }}</p>
 
-      <a href="#" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Shop Now</a>
+        <p class="text-gray-900 font-semibold">KSH {{ fruit.price }}</p>
+
+        <button @click="addToCart(fruit)" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+
+          Add To Cart
+
+        </button>
 
       </div>
 
@@ -29,6 +35,7 @@
 </template>
   
 <script>
+import { useCartStore } from '@/stores/cart';
 
   export default {
 
@@ -38,27 +45,38 @@
 
         fruits: [
 
-          { id: 1, name: 'Apple', description: 'Crisp and juicy apples from local orchards.', image: 'apples.jpeg' },
+          { id: 1, name: 'Apple', description: 'Crisp and juicy apples from local orchards.', image: 'apples.jpeg', price: 150 },
 
-          { id: 2, name: 'Orange', description: 'Sweet and tangy oranges bursting with vitamin C.', image: 'oranges.jpeg' },
+          { id: 2, name: 'Orange', description: 'Sweet and tangy oranges bursting with vitamin C.', image: 'oranges.jpeg', price: 100 },
 
-          { id: 3, name: 'Banana', description: 'Nutritious and delicious bananas perfect for a quick snack.', image: 'bananas.jpeg' },
+          { id: 3, name: 'Banana', description: 'Nutritious and delicious bananas perfect for a quick snack.', image: 'bananas.jpeg', price: 50 },
 
-          { id: 4, name: 'Strawberry', description: 'Fresh and sweet strawberries, perfect for desserts.', image: 'strawberry.jpeg' },
+          { id: 4, name: 'Strawberry', description: 'Fresh and sweet strawberries, perfect for desserts.', image: 'strawberry.jpeg', price: 200 },
 
-          { id: 5, name: 'Grapes', description: 'Juicy grapes that are great for snacking and wine-making.', image: 'grapes.jpeg' },
+          { id: 5, name: 'Grapes', description: 'Juicy grapes that are great for snacking and wine-making.', image: 'grapes.jpeg', price: 180 },
 
-          { id: 6, name: 'Pineapple', description: 'Tropical pineapples with a sweet and tangy flavor.', image: 'pineapple.jpeg' },
+          { id: 6, name: 'Pineapple', description: 'Tropical pineapples with a sweet and tangy flavor.', image: 'pineapple.jpeg', price: 120 },
 
-          { id: 7, name: 'Watermelon', description: 'Refreshing watermelons perfect for hot summer days.', image: 'watermelon.jpeg' },
+          { id: 7, name: 'Watermelon', description: 'Refreshing watermelons perfect for hot summer days.', image: 'watermelon.jpeg', price: 90 },
 
-          { id: 8, name: 'Mango', description: 'Sweet and juicy mangoes from tropical regions.', image: 'mangos.jpeg' },
+          { id: 8, name: 'Mango', description: 'Sweet and juicy mangoes from tropical regions.', image: 'mangos.jpeg', price: 130 },
 
-          { id: 9, name: 'Blueberry', description: 'Antioxidant-rich blueberries perfect for snacks and baking.', image: 'blueberry.jpeg' },
-      
+          { id: 9, name: 'Blueberry', description: 'Antioxidant-rich blueberries perfect for snacks and baking.', image: 'blueberry.jpeg', price: 220 },        
         ]
 
       };
+
+    },
+
+    methods: {
+
+      addToCart(fruit) {
+
+        const cartStore = useCartStore();
+
+        cartStore.addToCart(fruit);
+
+      }
 
     }
 

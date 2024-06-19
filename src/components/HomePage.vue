@@ -34,7 +34,7 @@
                 </svg>
             </button>
 
-            <button class="flex items-center hover:text-white-200" to="/cart">
+            <router-link class="flex items-center hover:text-white-200" to="/cart">
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 
@@ -51,7 +51,7 @@
 
                 </span>
 
-            </button>
+            </router-link>
                     <!-- Sign In / Register Section -->
 
             <button v-if="''" class="flex items-center hover:text-white-200" to="/login">
@@ -265,7 +265,7 @@
 
         height: 100%;
 
-        background-color: rgba(54, 52, 52, 0.5); 
+        background-color: rgba(30, 28, 28, 0.5); 
 
         z-index: 1;
 
