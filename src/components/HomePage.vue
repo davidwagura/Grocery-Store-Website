@@ -3,14 +3,14 @@
 
     <div>
 
-        <div >
-
-            <img class="rounded-lg w-30px h-30px" src="../assets/images/grocery.jpg" />
-
-        </div>
-
        <nav class="mt-12 mb-8 text-center font-bold">
-        
+
+            <div class="flex items-center justify-start ml-2 -mb-12">
+
+                <img class="rounded-full w-16 h-16 object-cover" src="../assets/images/grocery.jpg" alt="Website Logo" />
+
+            </div>
+
             <router-link class="pl-6" to="/">Home</router-link>
 
             <router-link class="pl-6" to="/about">About</router-link>
@@ -84,7 +84,7 @@
 
     </div>
 
-    <div class="mt-16">
+    <div class="mt-16 text-white">
     
         <div class="rounded-lg p-8 text-left m-8 bg-cover bg-center" id="fruits">
        
@@ -236,55 +236,76 @@
 
 </template>
 
+
 <style>
+
+    #fruits, #vegetables, #dairy, #meat-seafood, #bakery, #pantry {
+
+        position: relative;
+
+        background-size: cover;
+
+        background-repeat: no-repeat;
+
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+    }
+
+    #fruits::before, #vegetables::before, #dairy::before, #meat-seafood::before, #bakery::before, #pantry::before {
+
+        content: '';
+
+        position: absolute;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        background-color: rgba(54, 52, 52, 0.5); 
+
+        z-index: 1;
+
+    }
+
+    #fruits > *, #vegetables > *, #dairy > *, #meat-seafood > *, #bakery > *, #pantry > * {
+
+        position: relative;
+
+        z-index: 2;
+
+    }
+
     #fruits {
 
         background-image: url('../assets/images/fruits1.jpeg');
 
-        color: white;
-
     }
 
-     #vegetables {
+    #vegetables {
 
         background-image: url('../assets/images/vegetables.jpeg');
 
-        color: white;
-
-        background-size: cover;
-        
     }
-
 
     #dairy {
 
         background-image: url('../assets/images/dairy products.jpeg');
 
-        color: white;
-
-        background-size: cover;
-
     }
- 
+
     #meat-seafood {
 
         background-image: url('../assets/images/meat.jpeg');
 
-        color: white;
-
-        background-size: cover;
-
     }
-   
+
     #bakery {
 
         background-image: url('../assets/images/bakery.jpeg');
-
-        color: white;
-
-        background-repeat: no-repeat;
-
-        background-size: cover;
 
     }
 
@@ -292,11 +313,6 @@
 
         background-image: url('../assets/images/pantry.jpeg');
 
-        color: white;
- 
-        background-repeat: no-repeat;
-
-        background-size: cover;
-
     }
+
 </style>
