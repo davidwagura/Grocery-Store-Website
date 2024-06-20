@@ -16,6 +16,12 @@ export const useCartStore = defineStore('cart', {
 
     },
 
+    addToCartItem(item) {
+
+      this.cart.push(item);
+
+    },
+
     placeOrder() {
 
       this.cart = [];

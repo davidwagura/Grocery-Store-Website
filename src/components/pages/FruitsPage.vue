@@ -8,7 +8,7 @@
         <!-- Fruits Card -->
         <div v-for="fruit in fruits" :key="fruit.id" class="bg-white rounded-lg overflow-hidden shadow-lg">
 
-          <img :src="require(`../../assets/fruits/${fruit.image}`)" alt="Fruit" class="w-full h-64 object-cover">
+          <img :src="require(`../../assets/${fruit.category}/${fruit.image}`)" alt="Fruit" class="w-full h-64 object-cover">
 
         <div class="p-4"> 
 
@@ -42,49 +42,46 @@ import { ref } from 'vue';
   export default {
 
     setup() {
-
+      //composition api
       const fruits = ref([
 
+        { id: 1, name: 'Apple', description: 'Crisp and juicy apples from local orchards.', image: 'apples.jpeg',category: 'fruits', price: 150 },
 
-          { id: 1, name: 'Apple', description: 'Crisp and juicy apples from local orchards.', image: 'apples.jpeg', price: 150 },
+        { id: 2, name: 'Orange', description: 'Sweet and tangy oranges bursting with vitamin C.', image: 'oranges.jpeg',category: 'fruits', price: 100 },
 
-          { id: 2, name: 'Orange', description: 'Sweet and tangy oranges bursting with vitamin C.', image: 'oranges.jpeg', price: 100 },
+        { id: 3, name: 'Banana', description: 'Nutritious and delicious bananas perfect for a quick snack.', image: 'bananas.jpeg',category: 'fruits', price: 50 },
 
-          { id: 3, name: 'Banana', description: 'Nutritious and delicious bananas perfect for a quick snack.', image: 'bananas.jpeg', price: 50 },
+        { id: 4, name: 'Strawberry', description: 'Fresh and sweet strawberries, perfect for desserts.', image: 'strawberry.jpeg',category: 'fruits', price: 200 },
 
-          { id: 4, name: 'Strawberry', description: 'Fresh and sweet strawberries, perfect for desserts.', image: 'strawberry.jpeg', price: 200 },
+        { id: 5, name: 'Grapes', description: 'Juicy grapes that are great for snacking and wine-making.', image: 'grapes.jpeg',category: 'fruits', price: 180 },
 
-          { id: 5, name: 'Grapes', description: 'Juicy grapes that are great for snacking and wine-making.', image: 'grapes.jpeg', price: 180 },
+        { id: 6, name: 'Pineapple', description: 'Tropical pineapples with a sweet and tangy flavor.', image: 'pineapple.jpeg',category: 'fruits', price: 120 },
 
-          { id: 6, name: 'Pineapple', description: 'Tropical pineapples with a sweet and tangy flavor.', image: 'pineapple.jpeg', price: 120 },
+        { id: 7, name: 'Watermelon', description: 'Refreshing watermelons perfect for hot summer days.', image: 'watermelon.jpeg',category: 'fruits', price: 90 },
 
-          { id: 7, name: 'Watermelon', description: 'Refreshing watermelons perfect for hot summer days.', image: 'watermelon.jpeg', price: 90 },
+        { id: 8, name: 'Mango', description: 'Sweet and juicy mangoes from tropical regions.', image: 'mangos.jpeg',category: 'fruits', price: 130 },
 
-          { id: 8, name: 'Mango', description: 'Sweet and juicy mangoes from tropical regions.', image: 'mangos.jpeg', price: 130 },
-
-          { id: 9, name: 'Blueberry', description: 'Antioxidant-rich blueberries perfect for snacks and baking.', image: 'blueberry.jpeg', price: 220 },        
+        { id: 9, name: 'Blueberry', description: 'Antioxidant-rich blueberries perfect for snacks and baking.', image: 'blueberry.jpeg',category: 'fruits', price: 220 },        
 
       ]);
 
+      const cartStore = useCartStore();
+
+        const addToCart = (fruit) => {
+
+          cartStore.addToCart(fruit);
+
+        }
+
       return {
 
-        fruits
+        fruits,
+
+        addToCart,
 
       };
 
     },
-
-    methods: {
-
-      addToCart(fruit) {
-
-        const cartStore = useCartStore();
-
-        cartStore.addToCart(fruit);
-
-      }
-
-    }
 
   };
 

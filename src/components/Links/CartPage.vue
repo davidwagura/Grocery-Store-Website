@@ -14,7 +14,7 @@
 
             <div v-for="item in cart" :key="item.id" class="bg-white rounded-lg overflow-hidden shadow-lg">
 
-                <img :src="require(`../../assets/fruits/${item.image}`)" alt="Fruit" class="w-full h-64 object-cover">
+                <img :src="require(`../../assets/${item.category}/${item.image}`)" alt="Item" class="w-full h-64 object-cover">
 
                 <div class="p-4">
 
@@ -33,7 +33,7 @@
                     Proceed to Checkout
                     
                 </a>
-                
+
         </div>
 
     </div>
