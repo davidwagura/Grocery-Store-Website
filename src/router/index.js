@@ -16,6 +16,8 @@ import VegetablePage from '@/components/pages/VegetablePage.vue';
 
 import CartPage from '@/components/Links/CartPage.vue'
 
+import CheckoutPage from '@/components/Links/CheckoutPage.vue'
+
 
 const routes = [
 
@@ -33,7 +35,10 @@ const routes = [
 
 { path: '/pantry', component: PantryStaples },
 
-{ path: '/cart', component: CartPage  }
+{ path: '/cart', component: CartPage  },
+
+{ path: '/checkout', component: CheckoutPage  },
+
 
 
 ]

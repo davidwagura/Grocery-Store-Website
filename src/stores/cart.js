@@ -14,8 +14,14 @@ export const useCartStore = defineStore('cart', {
 
       this.cart.push(fruit);
 
-    }
+    },
 
+    placeOrder() {
+
+      this.cart = [];
+
+    }
+    
   }
-  
+
 });

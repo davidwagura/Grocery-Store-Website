@@ -37,13 +37,14 @@
 <script>
 import { useCartStore } from '@/stores/cart';
 
+import { ref } from 'vue';
+
   export default {
 
-    data() {
+    setup() {
 
-      return {
+      const fruits = ref([
 
-        fruits: [
 
           { id: 1, name: 'Apple', description: 'Crisp and juicy apples from local orchards.', image: 'apples.jpeg', price: 150 },
 
@@ -62,7 +63,12 @@ import { useCartStore } from '@/stores/cart';
           { id: 8, name: 'Mango', description: 'Sweet and juicy mangoes from tropical regions.', image: 'mangos.jpeg', price: 130 },
 
           { id: 9, name: 'Blueberry', description: 'Antioxidant-rich blueberries perfect for snacks and baking.', image: 'blueberry.jpeg', price: 220 },        
-        ]
+
+      ]);
+
+      return {
+
+        fruits
 
       };
 
