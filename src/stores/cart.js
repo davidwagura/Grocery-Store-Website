@@ -28,6 +28,12 @@ export const useCartStore = defineStore('cart', {
 
     },
 
+    addToCartVegetable(vegetable) {
+
+      this.cart.push(vegetable);
+
+    },
+
 
     placeOrder() {
 
