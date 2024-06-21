@@ -122,7 +122,7 @@
 
                   <router-link to="/dairy" class="hover:underline">Dairy Products</router-link><br>
 
-                  <router-link to="/meat-seafood" class="hover:underline">Meat and Seafood</router-link><br>
+                  <router-link to="/meat" class="hover:underline">Meat and Seafood</router-link><br>
 
                   <router-link to="/bakery" class="hover:underline">Bakery</router-link><br>
 

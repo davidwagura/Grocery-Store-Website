@@ -8,7 +8,7 @@ import DairyProducts from '@/components/pages/DairyProducts.vue';
 
 import FruitsPage from '@/components/pages/FruitsPage.vue';
 
-import MeatSeafood from '@/components/pages/Meat-Seafood.vue';
+import MeatSeafood from '@/components/pages/MeatSeaFood.vue';
 
 import PantryStaples from '@/components/pages/PantryStaples.vue';
 
@@ -29,7 +29,7 @@ const routes = [
 
 { path: '/dairy', component: DairyProducts },
 
-{ path: '/meat-seafood', component: MeatSeafood },
+{ path: '/meat', component: MeatSeafood },
 
 { path: '/bakery', component: BakeryPage },
 

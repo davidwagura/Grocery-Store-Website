@@ -60,7 +60,7 @@
                 
                 <div class="flex flex-col rounded-lg p-8 m-8" id="meat-seafood">
                     
-                    <router-link to="/meat-seafood">
+                    <router-link to="/meat">
                         
                         <h2 class="font-bold mb-4">Meat and Seafood</h2>
                     
@@ -68,7 +68,7 @@
                 
                     <p>From succulent steaks to fresh seafood, our meat and seafood selection offers premium cuts and sustainable options. Enjoy restaurant-quality meals at home with our carefully sourced proteins.</p>
                     
-                    <router-link class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" to="/meat-seafood">Shop Now</router-link>
+                    <router-link class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" to="/meat">Shop Now</router-link>
                 
                 </div>
 
