@@ -22,6 +22,13 @@ export const useCartStore = defineStore('cart', {
 
     },
 
+    addToCartProduct(product) {
+
+      this.cart.push(product);
+
+    },
+
+
     placeOrder() {
 
       this.cart = [];
