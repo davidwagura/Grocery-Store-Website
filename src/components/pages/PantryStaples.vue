@@ -4,7 +4,7 @@
   
       <h1 class="text-3xl flex justify-center mt-3 underline font-bold mb-8">Explore Fresh pantry Staples</h1>
     
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-1">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
   
           <div v-for="pantry in pantryStaples" :key="pantry.id" class="bg-white rounded-lg overflow-hidden shadow-lg">
   

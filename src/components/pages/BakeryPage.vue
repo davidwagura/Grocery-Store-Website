@@ -4,7 +4,7 @@
   
       <h1 class="text-3xl flex justify-center mt-3 underline font-bold mb-8">Explore Fresh items</h1>
     
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-1">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
   
           <!-- items Card -->
           <div v-for="item in bakeryItems" :key="item.id" class="bg-white rounded-lg overflow-hidden shadow-lg">
