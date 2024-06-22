@@ -40,6 +40,11 @@ export const useCartStore = defineStore('cart', {
 
     },
 
+    addToCartPantry(pantry) {
+
+      this.cart.push(pantry);
+
+    },
 
 
     placeOrder() {

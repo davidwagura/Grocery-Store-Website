@@ -74,6 +74,12 @@
 
           }
 
+          localStorage.setItem('id', 3)
+
+          let id = localStorage.getItem('id')
+
+          console.log(id);
+
           return {
 
               seaFoods,
