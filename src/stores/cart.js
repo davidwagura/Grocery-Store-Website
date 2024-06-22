@@ -53,6 +53,8 @@ export const useCartStore = defineStore('cart', {
 
     }
     
-  }
+  },
+
+  persist: true,  
 
 });
