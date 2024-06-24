@@ -50,11 +50,11 @@
 
               </td>
 
-              <td class="p-4">KSH {{ item.price }}</td>
+              <td class="p-4">${{ item.price }}</td>
 
               <td class="p-4">{{ item.id }}</td>
 
-              <td class="p-4">KSH {{ itemTotal(item) }}</td>
+              <td class="p-4">${{ itemTotal(item) }}</td>
 
               <td class="p-4">
 

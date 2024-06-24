@@ -16,7 +16,7 @@
 
         <p class="text-gray-700">{{ fruit.description }}</p>
 
-        <p class="text-gray-900 font-semibold">KSH {{ fruit.price }}</p>
+        <p class="text-gray-900 font-semibold">${{ fruit.price }}</p>
 
         <button @click="addToCart(fruit)" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
 
@@ -45,23 +45,23 @@ import { ref } from 'vue';
       //composition api
       const fruits = ref([
 
-        { id: 1, name: 'Apple', description: 'Crisp and juicy apples from local orchards.', image: 'apples.jpeg',category: 'fruits', price: 150 },
+        { id: 1, name: 'Apple', description: 'Crisp and juicy apples from local orchards.', image: 'apples.jpeg',category: 'fruits', price: 1.5 },
 
-        { id: 2, name: 'Orange', description: 'Sweet and tangy oranges bursting with vitamin C.', image: 'oranges.jpeg',category: 'fruits', price: 100 },
+        { id: 2, name: 'Orange', description: 'Sweet and tangy oranges bursting with vitamin C.', image: 'oranges.jpeg',category: 'fruits', price: 10 },
 
-        { id: 3, name: 'Banana', description: 'Nutritious and delicious bananas perfect for a quick snack.', image: 'bananas.jpeg',category: 'fruits', price: 50 },
+        { id: 3, name: 'Banana', description: 'Nutritious and delicious bananas perfect for a quick snack.', image: 'bananas.jpeg',category: 'fruits', price: 5 },
 
-        { id: 4, name: 'Strawberry', description: 'Fresh and sweet strawberries, perfect for desserts.', image: 'strawberry.jpeg',category: 'fruits', price: 200 },
+        { id: 4, name: 'Strawberry', description: 'Fresh and sweet strawberries, perfect for desserts.', image: 'strawberry.jpeg',category: 'fruits', price: 2 },
 
-        { id: 5, name: 'Grapes', description: 'Juicy grapes that are great for snacking and wine-making.', image: 'grapes.jpeg',category: 'fruits', price: 180 },
+        { id: 5, name: 'Grapes', description: 'Juicy grapes that are great for snacking and wine-making.', image: 'grapes.jpeg',category: 'fruits', price: 18 },
 
-        { id: 6, name: 'Pineapple', description: 'Tropical pineapples with a sweet and tangy flavor.', image: 'pineapple.jpeg',category: 'fruits', price: 120 },
+        { id: 6, name: 'Pineapple', description: 'Tropical pineapples with a sweet and tangy flavor.', image: 'pineapple.jpeg',category: 'fruits', price: 12 },
 
-        { id: 7, name: 'Watermelon', description: 'Refreshing watermelons perfect for hot summer days.', image: 'watermelon.jpeg',category: 'fruits', price: 90 },
+        { id: 7, name: 'Watermelon', description: 'Refreshing watermelons perfect for hot summer days.', image: 'watermelon.jpeg',category: 'fruits', price: 9 },
 
-        { id: 8, name: 'Mango', description: 'Sweet and juicy mangoes from tropical regions.', image: 'mangos.jpeg',category: 'fruits', price: 130 },
+        { id: 8, name: 'Mango', description: 'Sweet and juicy mangoes from tropical regions.', image: 'mangos.jpeg',category: 'fruits', price: 13 },
 
-        { id: 9, name: 'Blueberry', description: 'Antioxidant-rich blueberries perfect for snacks and baking.', image: 'blueberry.jpeg',category: 'fruits', price: 220 },        
+        { id: 9, name: 'Blueberry', description: 'Antioxidant-rich blueberries perfect for snacks and baking.', image: 'blueberry.jpeg',category: 'fruits', price: 2.2 },        
 
       ]);
 

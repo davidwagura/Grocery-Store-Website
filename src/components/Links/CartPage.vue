@@ -25,7 +25,7 @@
 
                     <p class="text-gray-700">{{ item.description }}</p>
 
-                    <p class="text-gray-900 font-semibold">KSH {{ item.price }}</p>
+                    <p class="text-gray-900 font-semibold">${{ item.price }}</p>
 
                 </div>
 
