@@ -2,7 +2,7 @@
 
     <div class="min-h-screen flex flex-col">
 
-        <nav class="mb-8 text-center font-bold fixed top-0 w-full bg-white z-10">
+        <nav class="mb-8  text-center font-bold fixed top-0 w-full bg-white p-2 z-10">
 
             <div class="flex justify-center mt-4">
 

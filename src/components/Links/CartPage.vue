@@ -2,9 +2,10 @@
 
     <div class="container mx-auto py-8">
 
-        <h1 class="text-3xl font-bold mb-8 underline flex justify-center mt-3">Your Cart ({{ cartItemCount }} items)</h1>
 
-        <h1 class="text-3xl font-bold mb-8 underline flex justify-center mt-3">Your Cart</h1>
+        <h1 class="text-3xl font-bold underline flex justify-center mt-6">Your Cart</h1>
+
+        <span class="text-3xl font-bold -mt-7 underline flex justify-end">Your Cart ({{ cartItemCount }} items)</span>
 
         <div v-if="cart.length === 0" class="text-center text-gray-700">
 
@@ -36,7 +37,7 @@
 
     <div class="flex justify-end mb-4 mr-4">
 
-        <a href="/checkout" class="bg-blue-500 p-8 hover:bg-blue-600 text-white rounded">
+        <a href="/checkout" class="bg-blue-500 p-2 hover:bg-blue-600 text-white rounded">
 
             Proceed to  Checkout
 

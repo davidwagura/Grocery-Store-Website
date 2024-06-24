@@ -18,28 +18,34 @@ import CartPage from '@/components/Links/CartPage.vue'
 
 import CheckoutPage from '@/components/Links/CheckoutPage.vue'
 
+import AboutPage from '@/components/Links/AboutPage.vue'
+
+import ContactPage from '@/components/Links/ContactPage.vue'
+
 
 const routes = [
 
-{ path: '/', component: HomePage },
+    { path: '/', component: HomePage },
 
-{ path: '/fruits', component: FruitsPage },
+    { path: '/fruits', component: FruitsPage },
 
-{ path: '/vegetables', component: VegetablePage },
+    { path: '/vegetables', component: VegetablePage },
 
-{ path: '/dairy', component: DairyProducts },
+    { path: '/dairy', component: DairyProducts },
 
-{ path: '/meat', component: MeatSeafood },
+    { path: '/meat', component: MeatSeafood },
 
-{ path: '/bakery', component: BakeryPage },
+    { path: '/bakery', component: BakeryPage },
 
-{ path: '/pantry', component: PantryStaples },
+    { path: '/pantry', component: PantryStaples },
 
-{ path: '/cart', component: CartPage  },
+    { path: '/cart', component: CartPage  },
 
-{ path: '/checkout', component: CheckoutPage  },
+    { path: '/checkout', component: CheckoutPage  },
 
+    { path: '/about', component: AboutPage},
 
+    { path: '/contact', component: ContactPage },
 
 ]
 

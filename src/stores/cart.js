@@ -54,6 +54,8 @@ export const useCartStore = defineStore('cart', {
 
     clearCart() {
 
+      console.log('clearing the cart');
+      
       this.cart = [];
 
     }

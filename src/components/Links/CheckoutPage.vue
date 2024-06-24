@@ -1,6 +1,6 @@
 <template>
 
-  <div class="container mx-auto py-8">
+  <div class="container mt-3 mx-auto py-8">
 
     <h1 class="text-3xl font-bold mb-8 underline flex justify-center mt-3">Checkout</h1>
 
@@ -12,31 +12,65 @@
 
     <div v-else class="grid grid-cols-1 gap-8 p-1">
 
-      <div v-for="item in cart" :key="item.id" class="bg-white rounded-lg overflow-hidden shadow-lg p-4">
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg p-4">
 
-        <div class="flex items-center">
+        <table class="w-1/2 mx-auto text-center border-collapse">
 
-          <span class="mr-3 "> {{ item.id }}</span>
+          <thead>
 
-          <img :src="require(`../../assets/${item.category}/${item.image}`)" alt="Item" class="w-24 h-24 object-cover">
+            <tr class="border-b">
 
-          <div class="ml-4 flex-1">
+              <th class="p-4 text-left">Item</th>
 
-            <h2 class="text-xl font-bold mb-2">{{ item.name }}</h2>
+              <th class="p-4 text-left">Amount</th>
 
-            <p class="text-gray-700">{{ item.description }}</p>
+              <th class="p-4 text-left">Quantity</th>
 
-            <p class="text-gray-900 font-semibold">KSH {{ item.price }}</p>
+              <th class="p-4 text-left">Total</th>
 
-          </div>
+              <th class="p-4 text-left">Action</th>
 
-          <button @click="removeFromCart(item.id)" class="ml-4 bg-red-500 hover:bg-red-600 text-white py-1 px-3 rounded">
+            </tr>
 
-            Remove
+          </thead>
 
-          </button>
+          <tbody>
 
-        </div>
+            <tr v-for="item in cart" :key="item.id" class="border-b">
+
+              <td class="p-4 flex items-center">
+
+                <img :src="require(`../../assets/${item.category}/${item.image}`)" alt="Item" class="w-24 h-24 object-cover mr-4">
+
+                <div>
+
+                  <h2 class="text-xl font-bold">{{ item.name }}</h2>
+
+                </div>
+
+              </td>
+
+              <td class="p-4">KSH {{ item.price }}</td>
+
+              <td class="p-4">{{ item.id }}</td>
+
+              <td class="p-4">KSH {{ itemTotal(item) }}</td>
+
+              <td class="p-4">
+
+                <button @click="removeFromCart(item.id)" class="bg-red-500 hover:bg-red-600 text-white py-1 px-3 rounded">
+
+                  Remove
+
+                </button>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
 
       </div>
 
@@ -94,17 +128,23 @@
 
       });
 
+      const itemTotal = (item) => {
+
+        return item.price * item.id;
+
+      };
+
       const removeFromCart = (itemId) => {
 
         cartStore.removeFromCart(itemId);
 
       };
 
-      // const clearCart = () => {
+      const clearCart = () => {
 
-      //   cartStore.clearCart();
+        cartStore.clearCart();
 
-      // };
+      };
 
       return {
 
@@ -117,6 +157,11 @@
         totalAmount,
 
         removeFromCart,
+
+        clearCart,
+
+        itemTotal,
+
 
       };
 
