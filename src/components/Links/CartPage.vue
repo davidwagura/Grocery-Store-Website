@@ -38,7 +38,7 @@
 
         <a href="/checkout" class="bg-blue-500 p-8 hover:bg-blue-600 text-white rounded">
 
-            Checkout
+            Proceed to  Checkout
 
         </a>
 

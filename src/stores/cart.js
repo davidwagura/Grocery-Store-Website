@@ -52,7 +52,7 @@ export const useCartStore = defineStore('cart', {
       
     },
 
-    placeOrder() {
+    clearCart() {
 
       this.cart = [];
 

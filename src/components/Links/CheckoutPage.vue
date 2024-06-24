@@ -16,6 +16,8 @@
 
         <div class="flex items-center">
 
+          <span class="mr-3 "> {{ item.id }}</span>
+
           <img :src="require(`../../assets/${item.category}/${item.image}`)" alt="Item" class="w-24 h-24 object-cover">
 
           <div class="ml-4 flex-1">
@@ -48,7 +50,7 @@
 
         <p class="text-gray-900 font-semibold">Total Amount: KSH {{ totalAmount }}</p>
 
-        <a href="/payment" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+        <a href="/payment" @click="clearCart" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
 
           Proceed to Payment
 
@@ -97,6 +99,12 @@
         cartStore.removeFromCart(itemId);
 
       };
+
+      // const clearCart = () => {
+
+      //   cartStore.clearCart();
+
+      // };
 
       return {
 
