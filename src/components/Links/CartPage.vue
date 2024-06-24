@@ -2,6 +2,8 @@
 
     <div class="container mx-auto py-8">
 
+        <h1 class="text-3xl font-bold mb-8 underline flex justify-center mt-3">Your Cart ({{ cartItemCount }} items)</h1>
+
         <h1 class="text-3xl font-bold mb-8 underline flex justify-center mt-3">Your Cart</h1>
 
         <div v-if="cart.length === 0" class="text-center text-gray-700">
@@ -43,6 +45,8 @@
 <script>
 
 import { useCartStore } from '@/stores/cart.js';
+
+import { computed } from 'vue';
   
   export default {
 
@@ -50,9 +54,13 @@ import { useCartStore } from '@/stores/cart.js';
 
         const cartStore = useCartStore();
 
+        const cartItemCount = computed(() => cartStore.cart.length);
+
         return {
 
-            cart: cartStore.cart
+            cart: cartStore.cart,
+
+            cartItemCount,
 
         };
 
