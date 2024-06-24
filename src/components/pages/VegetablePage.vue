@@ -1,7 +1,7 @@
 <template>
 
     <div class="container mx-auto py-8">
-  
+
       <h1 class="text-3xl flex justify-center mt-3 underline font-bold mb-8">Explore Fresh vegetables</h1>
     
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
@@ -18,6 +18,12 @@
             <p class="text-gray-700">{{ vegetable.description }}</p>
     
             <p class="text-gray-900 font-semibold">KSH {{ vegetable.price }}</p>
+
+            <div v-if="showMessage">
+
+              {{ message }}
+
+            </div>
     
             <button @click="addToCart(vegetable)" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
 
@@ -44,6 +50,10 @@
     export default {
 
         setup() {
+
+          const message = ref('');
+
+          const showMessage = ref(false);
     
             const vegetables = ref([
         
@@ -71,15 +81,29 @@
             
             const addToCart = (vegetable) => {
 
-                cartStore.addToCartVegetable(vegetable);
+              cartStore.addToCartVegetable(vegetable);
+
+              message.value  = 'Item added to cart';
+
+              showMessage.value = true;
+
+              setTimeout(() => {
+
+                showMessage.value = false;
+
+              }, 800);
 
             }
 
             return {
 
-                vegetables,
+              vegetables,
 
-                addToCart
+              addToCart,
+
+              message,
+
+              showMessage,
 
             };
 

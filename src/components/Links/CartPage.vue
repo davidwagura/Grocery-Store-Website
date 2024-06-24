@@ -2,11 +2,11 @@
 
     <div class="container mx-auto py-8">
 
-        <h1 class="text-3xl font-bold mb-8">Your Cart</h1>
+        <h1 class="text-3xl font-bold mb-8 underline flex justify-center mt-3">Your Cart</h1>
 
         <div v-if="cart.length === 0" class="text-center text-gray-700">
 
-            Your cart is empty.
+            Your cart is empty
 
         </div>
 
