@@ -46,6 +46,11 @@ export const useCartStore = defineStore('cart', {
 
     },
 
+    removeFromCart(itemId) {
+
+      this.cart = this.cart.filter(item => item.id !== itemId);
+      
+    },
 
     placeOrder() {
 
