@@ -30,13 +30,17 @@
 
             </div>
 
-                <a href="/checkout" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
-
-                    Proceed to Checkout
-                    
-                </a>
-
         </div>
+
+    </div>
+
+    <div class="flex justify-end mb-4 mr-4">
+
+        <a href="/checkout" class="bg-blue-500 p-8 hover:bg-blue-600 text-white rounded">
+
+            Checkout
+
+        </a>
 
     </div>
 
