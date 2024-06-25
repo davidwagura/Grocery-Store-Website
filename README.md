@@ -73,18 +73,23 @@ To set up this project locally, follow these steps:
 
 ### 1. Clone the repository:
 
-``` git clone https://github.com/your-username/grocery-store-website.git
+```bash
+   git clone https://github.com/your-username/grocery-store-website.git
 
 ### 2. Navigate to the project directory:
 
-``` cd grocery-store-website
+```bash
+cd grocery-store-website
 
 ### 3. Install dependencies:
-. npm install.
+
+```bash
+npm install
 
 ### 4. Run the development server:
 
-``` npm run serve
+```bash
+npm run serve
 Open the browser:
 Visit http://localhost:8080 to view the website locally.
 
