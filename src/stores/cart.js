@@ -45,6 +45,7 @@ export const useCartStore = defineStore('cart', {
       this.cart.push(pantry);
 
     },
+    
 
     removeFromCart(itemId) {
 
@@ -53,12 +54,11 @@ export const useCartStore = defineStore('cart', {
     },
 
     clearCart() {
-
-      console.log('clearing the cart');
       
       this.cart = [];
 
     }
+
     
   },
 

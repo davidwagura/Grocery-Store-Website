@@ -12,8 +12,6 @@
 
                 <router-link class="pl-6" to="/contact">Contact Us</router-link>
 
-                <router-link class="pl-6" to="/offers">Offers</router-link>
-
             </div>
 
     
@@ -102,10 +100,6 @@
                         <span class="mx-2">|</span>
 
                         <router-link to="/contact" class="hover:underline inline">Contact Us</router-link>
-
-                        <span class="mx-2">|</span>
-
-                        <router-link to="/offers" class="hover:underline inline">Offers</router-link>
 
                     </div>
 

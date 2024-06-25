@@ -17,7 +17,13 @@
           <p class="text-gray-700">{{ food.description }}</p>
   
           <p class="text-gray-900 font-semibold">${{ food.price }}</p>
-  
+
+          <div v-if="food.showMessage" class="text-green-500 mt-2">
+
+            {{ food.message }}
+
+          </div>
+            
           <button @click="addToCart(food)" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
 
             Add To Cart
@@ -42,53 +48,57 @@
 
   export default {
 
-      setup() {
+    setup() {
   
-          const seaFoods= ref([
+      const seaFoods= ref([
       
-              { id: 1, name: 'Salmon', description: 'Fresh and juicy salmon fillets, perfect for grilling.', image: 'salmon.jpeg', category: 'food', price: 2.5 },
+        { id: 1, name: 'Salmon', description: 'Fresh and juicy salmon fillets, perfect for grilling.', image: 'salmon.jpeg', category: 'food', price: 2.5 },
 
-              { id: 2, name: 'Shrimp', description: 'Succulent shrimp, great for cocktails or stir-fries.', image: 'shrimp.jpeg', category: 'food', price: 18 },
+        { id: 2, name: 'Shrimp', description: 'Succulent shrimp, great for cocktails or stir-fries.', image: 'shrimp.jpeg', category: 'food', price: 18 },
 
-              { id: 3, name: 'Lobster', description: 'Premium lobster, ideal for special occasions.', image: 'lobster.jpeg', category: 'food', price: 5 },
+        { id: 3, name: 'Lobster', description: 'Premium lobster, ideal for special occasions.', image: 'lobster.jpeg', category: 'food', price: 5 },
 
-              { id: 4, name: 'Tuna', description: 'Fresh tuna steaks, perfect for searing or sushi.', image: 'tuna.jpeg', category: 'food', price: 30 },
+        { id: 4, name: 'Tuna', description: 'Fresh tuna steaks, perfect for searing or sushi.', image: 'tuna.jpeg', category: 'food', price: 30 },
 
-              { id: 5, name: 'Crab', description: 'Delicious crab legs, great for steaming or boiling.', image: 'crab.jpeg', category: 'food', price: 22 },
+        { id: 5, name: 'Crab', description: 'Delicious crab legs, great for steaming or boiling.', image: 'crab.jpeg', category: 'food', price: 22 },
 
-              { id: 6, name: 'Chicken Breast', description: 'Lean and tender chicken breast, perfect for grilling or baking.', image: 'chicken-breast.jpeg', category: 'food', price: 12 },
+        { id: 6, name: 'Chicken Breast', description: 'Lean and tender chicken breast, perfect for grilling or baking.', image: 'chicken-breast.jpeg', category: 'food', price: 12 },
 
-              { id: 7, name: 'Beef Steak', description: 'Juicy and flavorful beef steak, ideal for grilling.', image: 'beef-steak.jpeg', category: 'food', price: 30 },
+        { id: 7, name: 'Beef Steak', description: 'Juicy and flavorful beef steak, ideal for grilling.', image: 'beef-steak.jpeg', category: 'food', price: 30 },
 
-              { id: 8, name: 'Pork Chops', description: 'Tender pork chops, great for pan-frying or grilling.', image: 'pork-chops.jpeg', category: 'food', price: 15 },
+       { id: 8, name: 'Pork Chops', description: 'Tender pork chops, great for pan-frying or grilling.', image: 'pork-chops.jpeg', category: 'food', price: 15 },
 
-              { id: 9, name: 'Lamb Chops', description: 'Succulent lamb chops, perfect for grilling.', image: 'lamb-chops.jpeg', category: 'food', price: 35 },
+        { id: 9, name: 'Lamb Chops', description: 'Succulent lamb chops, perfect for grilling.', image: 'lamb-chops.jpeg', category: 'food', price: 35 },
 
-          ])
+      ])
 
-          const cartStore = useCartStore();
+      const cartStore = useCartStore();
           
-          const addToCart = (food) => {
+      const addToCart = (food) => {
 
-              cartStore.addToCartFood(food);
+        cartStore.addToCartFood(food);
 
-          }
+        food.message = 'Item added to cart';
 
-          localStorage.setItem('id', 3)
+        food.showMessage = true;
 
-          let id = localStorage.getItem('id')
+        setTimeout(() => {
 
-          console.log(id);
+          food.showMessage = false;
 
-          return {
+        }, 800);
 
-              seaFoods,
+      }
 
-              addToCart
+      return {
 
-          };
+        seaFoods,
 
-      },
+        addToCart
+
+      };
+         
+    },
 
   }
 

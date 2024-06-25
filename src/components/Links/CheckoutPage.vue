@@ -24,8 +24,6 @@
 
               <th class="p-4 text-left">Amount</th>
 
-              <th class="p-4 text-left">Quantity</th>
-
               <th class="p-4 text-left">Total</th>
 
               <th class="p-4 text-left">Action</th>
@@ -52,8 +50,6 @@
 
               <td class="p-4">${{ item.price }}</td>
 
-              <td class="p-4">{{ item.id }}</td>
-
               <td class="p-4">${{ itemTotal(item) }}</td>
 
               <td class="p-4">
@@ -74,17 +70,17 @@
 
       </div>
 
-      <div class="bg-white rounded-lg overflow-hidden shadow-lg p-4">
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg p-4 -mb-8">
 
         <h2 class="text-xl font-bold mb-2">Order Summary</h2>
 
-        <p class="text-gray-700">Total Price: KSH {{ totalPrice }}</p>
+        <p class="text-gray-700">Total Price:${{ totalPrice }}</p>
 
-        <p class="text-gray-700">Tax (16%): KSH {{ tax }}</p>
+        <p class="text-gray-700">Tax (16%):${{ tax }}</p>
 
-        <p class="text-gray-900 font-semibold">Total Amount: KSH {{ totalAmount }}</p>
+        <p class="text-gray-900 font-semibold">Total Amount:${{ totalAmount }}</p>
 
-        <a href="/payment" @click="clearCart" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+        <a href="" @click="confirmCheckout" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
 
           Proceed to Payment
 
@@ -104,11 +100,16 @@
 
   import { useCartStore } from '@/stores/cart.js';
 
+  import { useRouter } from 'vue-router';
+
+
   export default {
 
     setup() {
 
       const cartStore = useCartStore();
+
+      const router = useRouter();
 
       const totalPrice = computed(() => {
 
@@ -130,7 +131,7 @@
 
       const itemTotal = (item) => {
 
-        return item.price * item.id;
+        return item.price;
 
       };
 
@@ -145,6 +146,26 @@
         cartStore.clearCart();
 
       };
+
+      const confirmCheckout = () => {
+
+        if (confirm('Do you really want to proceed to payment?')) {
+
+          router.push('/payment').then(() => {
+
+            clearCart();
+
+          });
+
+        } else {
+
+          clearCart();
+
+          router.push('/');
+
+        }
+
+      }
 
       return {
 
@@ -162,6 +183,7 @@
 
         itemTotal,
 
+        confirmCheckout,
 
       };
 

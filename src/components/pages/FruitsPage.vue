@@ -18,6 +18,12 @@
 
         <p class="text-gray-900 font-semibold">${{ fruit.price }}</p>
 
+          <div v-if="fruit.showMessage" class="text-green-500 mt-2">
+
+            {{ fruit.message }}
+
+          </div>
+            
         <button @click="addToCart(fruit)" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
 
           Add To Cart
@@ -42,7 +48,7 @@ import { ref } from 'vue';
   export default {
 
     setup() {
-      //composition api
+
       const fruits = ref([
 
         { id: 1, name: 'Apple', description: 'Crisp and juicy apples from local orchards.', image: 'apples.jpeg',category: 'fruits', price: 1.5 },
@@ -67,11 +73,21 @@ import { ref } from 'vue';
 
       const cartStore = useCartStore();
 
-        const addToCart = (fruit) => {
+      const addToCart = (fruit) => {
 
-          cartStore.addToCart(fruit);
+        cartStore.addToCart(fruit);
 
-        }
+        fruit.message = 'Item added to cart';
+
+        fruit.showMessage = true;
+
+        setTimeout(() => {
+
+          fruit.showMessage = false;
+            
+        }, 800);
+
+      }
 
       return {
 

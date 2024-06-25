@@ -18,6 +18,12 @@
             <p class="text-gray-700">{{ item.description }}</p>
     
             <p class="text-gray-900 font-semibold">${{ item.price }}</p>
+
+            <div v-if="item.showMessage" class="text-green-500 mt-2">
+
+              {{ item.message }}
+
+            </div>
     
             <button @click="addToCart(item)" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
 
@@ -36,12 +42,12 @@
   </template>
     
 <script>
-import { ref } from 'vue';
+  import { ref } from 'vue';
 
-import { useCartStore } from '@/stores/cart';
+  import { useCartStore } from '@/stores/cart';
 
   export default {
-  //composition api
+
     setup() {
   
       const bakeryItems = ref([
@@ -52,7 +58,7 @@ import { useCartStore } from '@/stores/cart';
 
         { id: 3, name: 'Chocolate Cake', description: 'Rich and moist chocolate cake with a decadent ganache.', image: 'chocolate-cake.jpeg',category: 'bakery', price: 5 },
 
-        // { id: 4, name: 'Blueberry Muffin', description: 'Freshly baked blueberry muffins bursting with flavor.', image: 'blueberry-muffin.jpeg',category: 'bakery', price: 120 },
+        { id: 4, name: 'Blueberry Muffin', description: 'Freshly baked blueberry muffins bursting with flavor.', image: 'macaron.jpeg',category: 'bakery', price: 120 },
 
         { id: 5, name: 'Cinnamon Roll', description: 'Sweet and gooey cinnamon rolls with a cream cheese frosting.', image: 'cinnamon-roll.jpeg',category: 'bakery', price: 2 },
 
@@ -72,6 +78,16 @@ import { useCartStore } from '@/stores/cart';
 
         cartStore.addToCartItem(item);
 
+        item.message = 'Item added to cart';
+
+        item.showMessage = true;
+
+        setTimeout(() => {
+
+          item.showMessage = false;
+
+        }, 800);
+    
       }
 
       return {
@@ -83,20 +99,7 @@ import { useCartStore } from '@/stores/cart';
       };
 
     },
-
-    // methods: {
-
-    //   addToCart(item) {
-
-    //     const cartStore = useCartStore();
-
-    //     cartStore.addToCart(item);
-
-    //   }
-
-    // }
-
-
+    
   }
   
 </script>

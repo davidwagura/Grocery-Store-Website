@@ -20,7 +20,7 @@
                 <img :src="require(`../../assets/${item.category}/${item.image}`)" alt="Item" class="w-full h-64 object-cover">
 
                 <div class="p-4">
-
+                    
                     <h2 class="text-xl font-bold mb-2">{{ item.name }}</h2>
 
                     <p class="text-gray-700">{{ item.description }}</p>
