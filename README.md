@@ -87,7 +87,7 @@ To set up this project locally, follow these steps:
 
 - npm run serve
 
-### Open the browser:
+### 5. Open the browser:
 
 - Visit http://localhost:8080 to view the website locally.
 
