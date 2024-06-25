@@ -10,11 +10,14 @@ Welcome to our Grocery Store Website project! This project aims to provide a con
   - Products are dynamically fetched from data sources and displayed using Vue.js for an interactive user experience.
   
 ### Technologies Used
-- Vue.js: Frontend JavaScript framework for building user interfaces.
-- Tailwind CSS: Utility-first CSS framework used for styling components.
-- Pinia: Used to store cart items locally in the browser.
-- Visual Studio Code: Integrated Development Environment (IDE) for code editing and debugging.
-
+#### Vue.js:
+- Frontend JavaScript framework for building user interfaces.
+#### Tailwind CSS:
+-  Utility-first CSS framework used for styling components.
+#### Pinia:
+- Used to store cart items locally in the browser.
+#### Visual Studio Code:
+- Integrated Development Environment (IDE) for code editing and debugging.
 
 # Workflow and Execution
 
@@ -22,8 +25,8 @@ Welcome to our Grocery Store Website project! This project aims to provide a con
 
 ### Planning and Design:
 
-    - Define requirements and functionalities of the grocery store website
-    
+  - Define requirements and functionalities of the grocery store website
+  
 ### setting Up Project:
 
 - Initialize the Vue.js project with necessary dependencies.
@@ -70,18 +73,18 @@ To set up this project locally, follow these steps:
 
 ### 1. Clone the repository:
 
-. git clone https://github.com/your-username/grocery-store-website.git.
+``` git clone https://github.com/your-username/grocery-store-website.git
 
 ### 2. Navigate to the project directory:
 
-. cd grocery-store-website.
+``` cd grocery-store-website
 
 ### 3. Install dependencies:
 . npm install.
 
 ### 4. Run the development server:
 
-. npm run serve.
+``` npm run serve
 Open the browser:
 Visit http://localhost:8080 to view the website locally.
 
