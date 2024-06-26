@@ -3,7 +3,7 @@
 
     <div class="mt-16 text-white">
     
-        <div class="rounded-lg p-8 text-left m-8 bg-cover bg-center" id="fruits">
+        <div class="p-8 text-left m-8 bg-cover bg-center relative rounded-xl" id="fruits">
        
             <router-link to="/fruits">
             
@@ -19,7 +19,7 @@
 
         <div class="flex flex-col">
             
-            <div class="inline-flex">
+            <div class="inline-flex md:w-fit">
                 
                 <div class="flex flex-col p-8 m-8 rounded-lg" id="vegetables">
                     
@@ -56,7 +56,7 @@
 
         <div class="flex flex-col">
             
-            <div class="inline-flex">
+            <div class="inline-flex md:w-fit">
                 
                 <div class="flex flex-col rounded-lg p-8 m-8" id="meat-seafood">
                     
