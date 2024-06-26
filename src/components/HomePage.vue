@@ -56,7 +56,7 @@
 
         <div class="flex flex-col">
             
-            <div class="inline-flex md:w-fit">
+            <div class="inline-flex md:w-fit md:h-1/2">
                 
                 <div class="flex flex-col rounded-lg p-8 m-8" id="meat-seafood">
                     
