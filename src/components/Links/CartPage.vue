@@ -3,9 +3,7 @@
     <div class="container mx-auto py-8">
 
 
-        <h1 class="text-3xl font-bold underline flex justify-center mt-6">Your Cart</h1>
-
-        <span class="text-3xl font-bold -mt-7 underline flex justify-end">Your Cart ({{ cartItemCount }} items)</span>
+        <h1 class="text-3xl font-bold underline flex justify-center mt-6">Your Cart Items  ({{ cartItemCount }})</h1>
 
         <div v-if="cart.length === 0" class="text-center text-gray-700">
 

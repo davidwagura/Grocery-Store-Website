@@ -13,15 +13,15 @@
             
             <p class="mb-6">Discover a delightful selection of fresh fruits, sourced for their quality and flavor. From seasonal favorites to exotic varieties, our fruits are perfect for adding freshness to your meals or enjoying as a healthy snack.</p>
             
-            <router-link class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" to="/fruits">Shop Now</router-link>
+            <router-link class="bg-blue-500 border rounded-lg w-1/4 mt-3 p-4" to="/fruits">Shop Now</router-link>
         
         </div>
 
-        <div class="flex flex-col">
+        <!-- <div class="flex flex-col"> -->
             
-            <div class="inline-flex md:w-fit">
+            <!-- <div class="inline-flex"> -->
                 
-                <div class="flex flex-col p-8 m-8 rounded-lg" id="vegetables">
+                <div class="p-8 text-left rounded-lg m-8" id="vegetables">
                     
                     <router-link to="/vegetables">
                         
@@ -29,14 +29,14 @@
                     
                     </router-link>
                     
-                    <p>Explore our garden-fresh vegetables, packed with nutrients and flavor. From leafy greens to crunchy peppers, our selection ensures your meals are vibrant and nutritious.</p>
+                    <p class="mb-6">Explore our garden-fresh vegetables, packed with nutrients and flavor. From leafy greens to crunchy peppers, our selection ensures your meals are vibrant and nutritious.</p>
                     
-                    <router-link class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" to="/vegetables">Shop Now</router-link>
+                    <router-link class="bg-blue-500 border rounded-lg w-1/4 mt-3 p-4" to="/vegetables">Shop Now</router-link>
                 
                 </div>
 
             
-                <div class="flex rounded-lg flex-col p-8 m-8" id="dairy">
+                <div class="p-8 text-left rounded-lg m-8" id="dairy">
                     
                     <router-link to="/dairy">
                         
@@ -44,21 +44,21 @@
                     
                     </router-link>
                     
-                    <p>Indulge in our range of dairy products, sourced from local farms to ensure freshness and quality. From creamy yogurts to rich cheeses, discover dairy delights that elevate your recipes.</p>
+                    <p class="mb-6">Indulge in our range of dairy products, sourced from local farms to ensure freshness and quality. From creamy yogurts to rich cheeses, discover dairy delights that elevate your recipes.</p>
                     
-                    <router-link class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" to="/dairy">Shop Now</router-link>
+                    <router-link class="bg-blue-500 border rounded-lg w-1/4 mt-3 p-4" to="/dairy">Shop Now</router-link>
                 
                 </div>
             
-            </div>
+            <!-- </div> -->
     
-        </div>
+        <!-- </div> -->
 
-        <div class="flex flex-col">
+        <!-- <div class="flex flex-col"> -->
             
-            <div class="inline-flex md:w-fit md:h-1/2">
+            <!-- <div class="inline-flex md:w-fit md:h"> -->
                 
-                <div class="flex flex-col rounded-lg p-8 m-8" id="meat-seafood">
+                <div class="p-8 text-left rounded-lg m-8" id="meat-seafood">
                     
                     <router-link to="/meat">
                         
@@ -66,14 +66,14 @@
                     
                     </router-link>
                 
-                    <p>From succulent steaks to fresh seafood, our meat and seafood selection offers premium cuts and sustainable options. Enjoy restaurant-quality meals at home with our carefully sourced proteins.</p>
+                    <p class="mb-6">From succulent steaks to fresh seafood, our meat and seafood selection offers premium cuts and sustainable options. Enjoy restaurant-quality meals at home with our carefully sourced proteins.</p>
                     
-                    <router-link class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" to="/meat">Shop Now</router-link>
+                    <router-link class="bg-blue-500 border rounded-lg w-1/4 mt-3 p-4" to="/meat">Shop Now</router-link>
                 
                 </div>
 
                 
-                <div class="flex flex-col rounded-lg p-8 m-8 ml-auto" id="bakery">
+                <div class="p-8 text-left rounded-lg m-8" id="bakery">
                     
                     <router-link to="/bakery">
                         
@@ -81,15 +81,15 @@
                     
                     </router-link>
                     
-                    <p>Experience the aroma of freshly baked goods with our bakery collection. From artisan breads to decadent pastries, our bakery items are crafted with passion and expertise to satisfy every craving.</p>
+                    <p class="mb-6">Experience the aroma of freshly baked goods with our bakery collection. From artisan breads to decadent pastries, our bakery items are crafted with passion and expertise to satisfy every craving.</p>
                     
-                    <router-link class="bg-blue-500 border rounded-full w-1/4 mt-3 p-4" to="/bakery">Shop Now</router-link>
+                    <router-link class="bg-blue-500 border rounded-lg w-1/4 mt-3 p-4" to="/bakery">Shop Now</router-link>
                 
                 </div>
             
-            </div>
+            <!-- </div> -->
             
-        </div>
+        <!-- </div> -->
 
         <div class="p-8 text-left rounded-lg m-8" id="pantry">
 
@@ -101,7 +101,7 @@
                 
             <p class="mb-4">Stock your pantry with essentials that form the foundation of every meal. From grains and spices to canned goods, our pantry staples ensure you're prepared for any culinary adventure.</p>
                 
-            <router-link class="bg-blue-500 border rounded-full w-1/4 p-4" to="/pantry">Shop Now</router-link>
+            <router-link class="bg-blue-500 border rounded-lg w-1/4 mt-3 p-4" to="/pantry">Shop Now</router-link>
 
         </div>
 
