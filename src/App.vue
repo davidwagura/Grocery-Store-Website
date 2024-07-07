@@ -6,7 +6,7 @@
 
             <div class="items-center mt-4 px-4">
 
-                <div class="flex -mb-6 justify-center space-x-6">
+                <div class="flex -mb-6 space-x-6">
 
                     <router-link to="/">Home</router-link>
 
